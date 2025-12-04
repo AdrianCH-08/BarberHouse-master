@@ -101,10 +101,10 @@ class UsuarioController {
         dni,
         rol
       });
-       const sendMetric = require("../metrics");  // Ajusta el path según tu proyecto
+      // Ajusta el path según tu proyecto
     sendMetric("usuarios_registrados", 1);
 
-    res.status(201).json({ message: 'Usuario creado correctamente', usuarioId });
+   
       res.status(201).json({ message: 'Usuario creado correctamente', usuarioId });
     } catch (error) {
       console.error('Error al registrar:', error);
