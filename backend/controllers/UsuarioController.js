@@ -51,7 +51,7 @@ class UsuarioController {
   // REGISTRAR
   static async registrar(req, res) {
     try {
-      const { nombre_usuario, correo, dni, password, rol } = req.body;
+      let{ nombre_usuario, correo, dni, password, rol } = req.body;
 
       console.log('--- DEBUG REGISTRO ---');
       console.log('Datos recibidos:', { nombre_usuario, correo, dni, rol, password: '***' });
@@ -60,7 +60,7 @@ class UsuarioController {
         console.log('Faltan datos');
         return res.status(400).json({ message: 'Datos incompletos' });
       }
-
+      rol = rol.toLowerCase();
       // Validar email
       const emailValidation = validateEmail(correo);
       if (!emailValidation.valid) {
