@@ -58,14 +58,12 @@ const corsOptions = {
   origin: function (origin, callback) {
     const whitelist = [
       process.env.FRONTEND_URL,
-      'http://localhost:3001',
-      'http://127.0.0.1:3001',
-      'http://localhost:5500', // Live Server
-      'http://127.0.0.1:5500', // Live Server
-      'http://localhost:5501',
-      'http://127.0.0.1:5501',
-      'http://localhost:5502',
-      'http://127.0.0.1:5502'
+        'http://localhost:3001',
+  'http://127.0.0.1:3001',
+  'http://localhost:5500',
+  'http://127.0.0.1:5500',
+  'https://barberhousefront.netlify.app',   // FRONTEND
+  'https://barberhouse-master.onrender.com' // BACKEND
     ].filter(Boolean);
 
     // Permitir requests sin origin (como Postman o apps moviles)
