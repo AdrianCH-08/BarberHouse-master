@@ -1,5 +1,6 @@
 // frontend/assets/js/admin-horarios.js
-const API_URL = 'http://localhost:3001/api';
+const API_URL = 'https://barberhouse-master.onrender.com/api';
+
 let barberoSeleccionado = null;
 let horarios = [];
 

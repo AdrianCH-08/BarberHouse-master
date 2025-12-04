@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:3001/api";
+const API_URL = 'https://barberhouse-master.onrender.com/api';
+
 const token = localStorage.getItem('token');
 
 if (!token) {
