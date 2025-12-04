@@ -20,6 +20,7 @@ const horarioRoutes = require('./routes/horarioRoutes');
 
 
 const app = express();
+app.set("trust proxy", 1);
 
 // ==========================================
 // CONFIGURACION DE SEGURIDAD
